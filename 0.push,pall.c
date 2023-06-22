@@ -3,7 +3,7 @@ void push(int a){
 	struct stack_s *pointer = malloc(sizeof(struct stack_s));
 	if (pointer == NULL)
 	{
-		printf("Error: malloc failed");
+		fprintf(stderr, "Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
 	if (head == NULL)
@@ -20,5 +20,22 @@ void push(int a){
 		pointer -> next = head;
 		head = pointer;
 	}
+}
+void pall(void)
+{
+	if (head == NULL)
+	{
+	}
+	else
+	{
+		struct stack_s *pointer;
+		pointer = head;
+		while (pointer != NULL)
+		{
+			printf("%d\n", pointer -> n);
+			pointer = pointer -> next;
+		}
+	}
+}
 
 
