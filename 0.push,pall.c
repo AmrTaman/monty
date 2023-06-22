@@ -1,3 +1,4 @@
+#include "monty.h"
 void push(int a){
 	struct stack_s *pointer = malloc(sizeof(struct stack_s));
 	if (pointer == NULL)
