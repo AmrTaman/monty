@@ -18,6 +18,7 @@ void push(int a){
 		pointer -> n = a;
 		pointer -> prev = NULL;
 		pointer -> next = head;
+		head -> prev = pointer;
 		head = pointer;
 	}
 }
