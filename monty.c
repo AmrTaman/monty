@@ -9,6 +9,7 @@
 void free_stack(stack_t **head)
 {
 	stack_t *ptr = *head, *tmp;
+
 	while (ptr)
 	{
 		tmp = ptr;
@@ -17,6 +18,7 @@ void free_stack(stack_t **head)
 	}
 }
 FILE *f = NULL;
+
 /**
  * main - running the monty interpreterr
  *
