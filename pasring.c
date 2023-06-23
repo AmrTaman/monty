@@ -16,7 +16,7 @@ int char_check(char *ptr, unsigned int len)
 
 	for (; i < len; i++)
 	{
-		if (ptr[i] < '0' || ptr[i] > '9')
+		if ((ptr[i] < '0' || ptr[i] > '9') && ptr[i] != '-')
 		{
 			return (1);
 		}
