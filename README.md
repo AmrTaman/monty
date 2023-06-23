@@ -1,2 +1,2 @@
 # monty
-stack and queues
+tack and queues
