@@ -33,8 +33,8 @@ int char_check(char *ptr, unsigned int len)
  */
 void parse(char *line, unsigned int line_num, stack_t **head)
 {
-	instruction_t func[] = {{"push", push}, {"pall", pall},
-		{"pint", pint}, {"pop", pop}, {"swap", swap},
+	instruction_t func[] = {{"push", push}, {"pall", pall}, {"pstr", pstr}
+		, {"pint", pint}, {"pop", pop}, {"swap", swap},
 		{"add", add}, {"nop", nop}, {"sub", sub}, {"mul", mul},
 	{"div", _div}, {"mod", mod}, {"pchar", pchar}, {"NULL", NULL}};
 	char *ch;
