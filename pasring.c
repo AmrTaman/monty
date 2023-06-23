@@ -43,7 +43,6 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 		if (func[i].f == NULL)
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line_num, ch);
-			free(ch);
 			free_stack(head);
 			exit(EXIT_FAILURE);
 		}
