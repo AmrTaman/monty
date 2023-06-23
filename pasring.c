@@ -49,7 +49,7 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 			{
 				ch = strtok(NULL, "\t \n");
 				if (ch == NULL || (atoi(ch) == 0 &&
-							 ch[0] != '0') || char_check(ch, strlen(ch)))
+							 ch[0] != '0' && ch[1] != '0') || char_check(ch, strlen(ch)))
 				{
 					fflush(stdout);
 					fprintf(stderr, "L%u: usage: push integer\n", line_num);
