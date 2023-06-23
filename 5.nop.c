@@ -3,6 +3,6 @@
 /**
  * nop - function*
  * */
-oid nop(void)
+void nop(void)
 {
 }
