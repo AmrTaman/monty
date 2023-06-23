@@ -1,8 +1,4 @@
-# amsamd
-push -0
-pall
-push 55
-push 4
-pall
-    #   dsf
-      # sadl
+push 75
+pchar
+push 444
+pchar

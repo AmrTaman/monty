@@ -47,4 +47,5 @@ void _div(struct stack_s **head, unsigned int line_number);
 void mul(struct stack_s **head, unsigned int line_number);
 void mod(struct stack_s **head, unsigned int line_number);
 void sub(struct stack_s **head, unsigned int line_number);
+void pchar(struct stack_s **head, unsigned int line_number);
 #endif
