@@ -18,3 +18,5 @@ void pint(struct stack_s **head, unsigned int line_number)
 		printf("%d\n", head->n);
 	}
 }
+
+
