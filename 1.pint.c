@@ -12,7 +12,7 @@ void pint(struct stack_s **head, unsigned int line_number)
 
 	if (temp == NULL)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	else
