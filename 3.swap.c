@@ -1,7 +1,7 @@
 #include "monty.h"
 #include <stdio.h>
 /**
- * pint - function
+ * swap - function
  * @head: head
  * @line_number: line number
  *
