@@ -13,6 +13,7 @@ int main(int argc, char **argv)
 	FILE *f;
 	char *s, line[1000];
 	int line_num = 1;
+	stack_t *head = NULL;
 
 	if (argc == 1 || argc > 2)
 	{
@@ -27,7 +28,7 @@ int main(int argc, char **argv)
 	}
 	while ((s = fgets(line, 1000, f)))
 	{
-		parse(s, line_num);
+		parse(s, line_num, &head);
 		line_num++;
 	}
 	return (0);

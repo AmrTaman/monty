@@ -32,8 +32,7 @@ typedef struct instruction_s
 } instruction_t;
 
 extern int survivor;
-extern stack_t *head;
-void parse(char *line, unsigned int line_num);
+void parse(char *line, unsigned int line_num, stack_t **head);
 void pint(struct stack_s **head, unsigned int line_number);
 void pop(struct stack_s **head, unsigned int line_number);
 void swap(struct stack_s **head, unsigned int line_number);

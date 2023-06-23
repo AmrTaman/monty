@@ -2,7 +2,6 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-stack_t *head = NULL;
 int survivor = 0;
 /**
  * pasre - parses and extracts needed string
@@ -10,7 +9,7 @@ int survivor = 0;
  * @line: each line of a file
  * @line_num: number of line
  */
-void parse(char *line, unsigned int line_num)
+void parse(char *line, unsigned int line_num, stack_t **head)
 {
 	instruction_t func[] = {
 		{"push", push},
@@ -19,26 +18,38 @@ void parse(char *line, unsigned int line_num)
 		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
-		{"nop", nop}
+		{"nop", nop},
+		{"NULL", NULL}
 	};
 	char *ch;
 	unsigned int i = 0;
 
-	ch = strtok(line, " ");
-	while (ch)
+	ch = strtok(line, "\t \n");
+	while (ch && func[i].opcode)
 	{
-		while (ch && func[i].opcode)
+		if (strcmp(ch, func[i].opcode) == 0)
 		{
-			if (strcmp(ch, func[i].opcode) == 0)
+			if (strcmp(ch, "push") == 0)
 			{
-				survivor = atoi(strtok(line, " "));
-				free(ch);
-				func[i].f(&head, line_num);
+				ch = strtok(NULL, "\t \n");
+				if (atoi(ch) == 0 && ch[0] != '0')
+				{
+					fprintf(stderr, "L%u: usage: push integer", line_num);
+					exit(EXIT_FAILURE);
+				}
+				survivor = atoi(ch);
 			}
-			i++;
+			func[i].f(head, line_num);
+			return;
 		}
-		ch = strtok(line, " ");
+		i++;
+		if (func[i].f == NULL)
+		{
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_num, ch);
+			exit(EXIT_FAILURE);
+		}
 	}
-	free(ch);
+
+
 }
 
