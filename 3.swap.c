@@ -8,9 +8,16 @@
  */
 void swap(struct stack_s **head, unsigned int line_number)
 {
+	if (*head == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	if ((*head)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short", line_number);
+		free_stack(*head);
+		fclose(f);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	else

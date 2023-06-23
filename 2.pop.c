@@ -10,7 +10,7 @@ void pop(struct stack_s **head, unsigned int line_number)
 {
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop an empty stack", line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	else
