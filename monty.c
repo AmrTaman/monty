@@ -53,6 +53,8 @@ int main(int argc, char **argv)
 	fseek(f, 0, SEEK_SET);
 	while ((s = fgets(line, 1000, f)))
 	{
+		if (s[0] == '#')
+			continue;
 		parse(s, line_num, &head);
 		line_num++;
 	}
