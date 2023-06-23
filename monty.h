@@ -31,5 +31,4 @@ typedef struct instruction_s
 } instruction_t;
 extern int survivor;
 extern stack_t *head;
-
 #endif

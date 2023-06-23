@@ -1,5 +1,8 @@
 #include "monty.h"
-void push(int a){
+void push(stack_t **head, unsigned int line_num)
+{
+
+
 	struct stack_s *pointer = malloc(sizeof(struct stack_s));
 	if (pointer == NULL)
 	{

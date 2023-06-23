@@ -41,6 +41,5 @@ void parse(char *line, unsigned int line_num)
 		ch = strtok(line, " ");
 	}
 	free(ch);
-	return;
 }
 
