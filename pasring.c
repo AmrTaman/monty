@@ -33,8 +33,7 @@ void parse(char *line, unsigned int line_num)
 			{
 				survivor = atoi(strtok(line, " "));
 				free(ch);
-				func[i].f(head, line_num);
-				return (0);
+				func[i].f(&head, line_num);
 			}
 			i++;
 		}

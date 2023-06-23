@@ -8,7 +8,7 @@
  */
 void pop(struct stack_s **head, unsigned int line_number)
 {
-	if (head == NULL)
+	if (*head == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack", line_number);
 		exit(EXIT_FAILURE);
@@ -17,8 +17,8 @@ void pop(struct stack_s **head, unsigned int line_number)
 	{
 		struct stack_s *pointer;
 
-		pointer = head;
-		head = head->next;
+		pointer = *head;
+		*head = (*head)->next;
 		free(pointer);
 	}
 }

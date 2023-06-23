@@ -1,7 +1,6 @@
 #include"monty.h"
 #include<stdio.h>
 #include<string.h>
-#include<stdlib.h>
 /**
  * main - running the monty interpreterr
  *
@@ -12,7 +11,7 @@
 int main(int argc, char **argv)
 {
 	FILE *f;
-	char *text, *frst, *s, line[1000];
+	char *s, line[1000];
 	int line_num = 1;
 
 	if (argc == 1 || argc > 2)
