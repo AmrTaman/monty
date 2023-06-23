@@ -15,7 +15,7 @@ void pstr(struct stack_s **head, unsigned int line_number)
 		printf("\n");
 	else
 	{
-		while (ptr->n != 0 && ptr && (ptr->n >= 0 && ptr->n <= 127))
+		while (ptr && ptr->n != 0 && (ptr->n >= 0 && ptr->n <= 127))
 		{
 			printf("%c", ptr->n);
 			ptr = ptr->next;
