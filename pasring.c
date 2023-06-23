@@ -3,7 +3,7 @@
 #include<string.h>
 #include<stdlib.h>
 stack_t *head = NULL;
-nt survivor = 0;
+int survivor = 0;
 /**
  * pasre - parses and extracts needed string
  *
