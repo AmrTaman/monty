@@ -27,7 +27,7 @@ void sub(struct stack_s **head, unsigned int line_number)
 
 		pointer1 = *head;
 		pointer2 = (*head)->next;
-		pointer2->n = (pointer1->n) - (pointer2->n);
+		pointer2->n = (pointer2->n) - (pointer1->n);
 		*head = pointer2;
 		(*head)->prev = NULL;
 		free(pointer1);
