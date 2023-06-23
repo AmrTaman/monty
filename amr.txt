@@ -1,2 +1,2 @@
-push 10asasadsa4
+push 3
 pall

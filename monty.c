@@ -43,6 +43,14 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
+	fseek(f, 0, SEEK_END);
+	if (ftell(f) == 0)
+	{
+		fclose(f);
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+	fseek(f, 0, SEEK_SET);
 	while ((s = fgets(line, 1000, f)))
 	{
 		parse(s, line_num, &head);
