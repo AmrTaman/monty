@@ -1,6 +1,7 @@
 #ifndef amr
 #define amr
 #include<stdlib.h>
+#include<stdio.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -32,6 +33,8 @@ typedef struct instruction_s
 } instruction_t;
 
 extern int survivor;
+extern FILE *f;
+void free_stack(stack_t **head);
 void parse(char *line, unsigned int line_num, stack_t **head);
 void pint(struct stack_s **head, unsigned int line_number);
 void pop(struct stack_s **head, unsigned int line_number);

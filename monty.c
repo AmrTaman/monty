@@ -2,6 +2,21 @@
 #include<stdio.h>
 #include<string.h>
 /**
+ * free_stack - freeing stack
+ *
+ * @head: head of stack
+ */
+void free_stack(stack_t **head)
+{
+	stack_t *ptr = *head, *tmp;
+	while (ptr)
+	{
+		tmp = ptr;
+		ptr = ptr->next;
+		free(tmp);
+	}
+}
+/**
  * main - running the monty interpreterr
  *
  * @argc: number of values
@@ -10,10 +25,10 @@
  */
 int main(int argc, char **argv)
 {
-	FILE *f;
 	char *s, line[1000];
 	int line_num = 1;
 	stack_t *head = NULL;
+	FILE *f;
 
 	if (argc == 1 || argc > 2)
 	{
@@ -31,5 +46,7 @@ int main(int argc, char **argv)
 		parse(s, line_num, &head);
 		line_num++;
 	}
+	free_stack(&head);
+	fclose(f);
 	return (0);
 }

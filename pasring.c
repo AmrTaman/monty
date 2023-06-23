@@ -35,6 +35,8 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 				if (atoi(ch) == 0 && ch[0] != '0')
 				{
 					fprintf(stderr, "L%u: usage: push integer", line_num);
+					free(ch);
+					free_stack(head);
 					exit(EXIT_FAILURE);
 				}
 				survivor = atoi(ch);
@@ -46,6 +48,8 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 		if (func[i].f == NULL)
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line_num, ch);
+			free(ch);
+			free_stack(head);
 			exit(EXIT_FAILURE);
 		}
 	}
