@@ -43,6 +43,8 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 	ch = strtok(line, "\t \n");
 	while (ch && func[i].opcode)
 	{
+		if (ch[0] == '#')
+			return;
 		if (strcmp(ch, func[i].opcode) == 0)
 		{
 			if (strcmp(ch, "push") == 0)
@@ -71,7 +73,5 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 			exit(EXIT_FAILURE);
 		}
 	}
-
-
 }
 
