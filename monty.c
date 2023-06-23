@@ -16,6 +16,7 @@ void free_stack(stack_t **head)
 		free(tmp);
 	}
 }
+FILE *f = NULL;
 /**
  * main - running the monty interpreterr
  *
@@ -28,7 +29,6 @@ int main(int argc, char **argv)
 	char *s, line[1000];
 	int line_num = 1;
 	stack_t *head = NULL;
-	FILE *f;
 
 	if (argc == 1 || argc > 2)
 	{

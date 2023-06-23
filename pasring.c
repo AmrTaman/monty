@@ -34,9 +34,9 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 				ch = strtok(NULL, "\t \n");
 				if (atoi(ch) == 0 && ch[0] != '0')
 				{
-					fprintf(stderr, "L%u: usage: push integer", line_num);
-					free(ch);
+					fprintf(stderr, "L%u: usage: push integer\n", line_num);
 					free_stack(head);
+					fclose(f);
 					exit(EXIT_FAILURE);
 				}
 				survivor = atoi(ch);
