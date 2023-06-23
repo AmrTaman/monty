@@ -9,7 +9,7 @@
  * @argv: elements of input values
  * Return: 0 in success
  */
-int main(int argc, char **argv)
+nt main(int argc, char **argv)
 {
 	FILE *f;
 	char *text, *frst, *s, line[1000];
