@@ -66,6 +66,7 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 		{
 			fprintf(stderr, "L%d: unknown instruction %s\n", line_num, ch);
 			free_stack(head);
+			fclose(f);
 			exit(EXIT_FAILURE);
 		}
 	}

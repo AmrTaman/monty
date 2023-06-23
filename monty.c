@@ -41,13 +41,14 @@ int main(int argc, char **argv)
 	if (f == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		fclose(f);
 		exit(EXIT_FAILURE);
 	}
 	fseek(f, 0, SEEK_END);
-	if (ftell(f) == 0)
+	if (ftell(f) <= 1)
 	{
-		fclose(f);
 		fprintf(stderr, "USAGE: monty file\n");
+		fclose(f);
 		exit(EXIT_FAILURE);
 	}
 	fseek(f, 0, SEEK_SET);
