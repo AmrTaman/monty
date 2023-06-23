@@ -29,12 +29,14 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
 extern int survivor;
 extern stack_t *head;
 void pint(struct stack_s **head, unsigned int line_number);
 void pop(struct stack_s **head, unsigned int line_number);
 void swap(struct stack_s **head, unsigned int line_number);
 void add(struct stack_s **head, unsigned int line_number);
-void nop();   
-
+void nop(void);
+void pall(stack_t **head, unsigned int line_num);
+void push(stack_t **head, unsigned int line_num);
 #endif

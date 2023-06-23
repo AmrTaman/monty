@@ -15,6 +15,6 @@ void pint(struct stack_s **head, unsigned int line_number)
 	}
 	else
 	{
-		printf("%d\n", head-> n);
+		printf("%d\n", head->n);
 	}
 }

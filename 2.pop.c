@@ -16,8 +16,9 @@ void pop(struct stack_s **head, unsigned int line_number)
 	else
 	{
 		struct stack_s *pointer;
+
 		pointer = head;
-		head = head-> next;
+		head = head->next;
 		free(pointer);
 	}
 }
