@@ -4,6 +4,27 @@
 #include<stdlib.h>
 int survivor = 0;
 /**
+ * char_check - checks characters
+ *
+ * @len: length of string
+ * @ptr: pointer
+ *Return: integer
+ */
+int char_check(char *ptr, unsigned int len)
+{
+	unsigned int i = 0;
+
+	for (; i < len; i++)
+	{
+		if (ptr[i] < '0' || ptr[i] > '9')
+		{
+			return (1);
+		}
+	}
+	return (0);
+}
+
+/**
  * parse - parses and extracts needed string
  *
  * @line: each line of a file
@@ -27,7 +48,8 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 			if (strcmp(ch, "push") == 0)
 			{
 				ch = strtok(NULL, "\t \n");
-				if (atoi(ch) == 0 && ch[0] != '0')
+				if ((atoi(ch) == 0 && ch[0] != '0') ||
+						 char_check(ch, strlen(ch)))
 				{
 					fprintf(stderr, "L%u: usage: push integer\n", line_num);
 					free_stack(head);
