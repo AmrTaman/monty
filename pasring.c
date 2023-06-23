@@ -35,8 +35,8 @@ void parse(char *line, unsigned int line_num, stack_t **head)
 {
 	instruction_t func[] = {{"push", push}, {"pall", pall},
 		{"pint", pint}, {"pop", pop}, {"swap", swap},
-		{"add", add}, {"nop", nop}, {"NULL", NULL}
-	};
+		{"add", add}, {"nop", nop}, {"sub", sub}, {"mul", mul},
+	{"div", _div}, {"mod", mod}, {"NULL", NULL}};
 	char *ch;
 	unsigned int i = 0;
 

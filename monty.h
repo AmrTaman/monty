@@ -43,4 +43,8 @@ void add(struct stack_s **head, unsigned int line_number);
 void nop(stack_t **head, unsigned int line_num);
 void pall(stack_t **head, unsigned int line_num);
 void push(stack_t **head, unsigned int line_num);
+void _div(struct stack_s **head, unsigned int line_number);
+void mul(struct stack_s **head, unsigned int line_number);
+void mod(struct stack_s **head, unsigned int line_number);
+void sub(struct stack_s **head, unsigned int line_number);
 #endif
