@@ -6,7 +6,7 @@
  * @head: pointer
  * @line_num: number of line
  */
-void pstr(struct stack_s **head, unsigned int line_number)
+void pstr(struct stack_s **head, unsigned int line_num)
 {
 	stack_t *ptr = *head;
 	unsigned int x = line_number;

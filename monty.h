@@ -49,4 +49,5 @@ void mod(struct stack_s **head, unsigned int line_number);
 void sub(struct stack_s **head, unsigned int line_number);
 void pchar(struct stack_s **head, unsigned int line_number);
 void pstr(struct stack_s **head, unsigned int line_number);
+void rotl(struct stack_s **head, unsigned int line_number);
 #endif

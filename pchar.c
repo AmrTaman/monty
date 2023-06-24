@@ -2,9 +2,9 @@
 #include"monty.h"
 /**
  * pchar - gets ascii of the integer in head
- * 
+ *
  * @head: head of stack
- * @line_num
+ * @line_num: integer
  */
 void pchar(stack_t **head, unsigned int line_num)
 {
