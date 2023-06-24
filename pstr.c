@@ -9,7 +9,7 @@
 void pstr(struct stack_s **head, unsigned int line_num)
 {
 	stack_t *ptr = *head;
-	unsigned int x = line_number;
+	unsigned int x = line_num;
 
 	if (*head == NULL)
 		printf("\n");
@@ -22,5 +22,5 @@ void pstr(struct stack_s **head, unsigned int line_num)
 		}
 		printf("\n");
 	}
-	line_number = x;
+	line_num = x;
 }
