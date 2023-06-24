@@ -23,3 +23,5 @@ void rotl(struct stack_s **head, unsigned int line_num)
 	ptr->next = ptr2;
 	line_num = x;
 }
+
+
