@@ -33,3 +33,5 @@ void sub(struct stack_s **head, unsigned int line_number)
 		free(pointer1);
 	}
 }
+
+
